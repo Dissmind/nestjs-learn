@@ -12,10 +12,10 @@ export class RolesController {
 
 
 
-  @Get('/:value')
-  getByValue(@Param('value') value: string) {
-    return this.rolesService.getRoleByValue(value)
-  }
+  // @Get('/:value')
+  // getByValue(@Param('value') value: string) {
+  //   return this.rolesService.getRoleByValue(value)
+  // }
 
 
   @Post()

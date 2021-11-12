@@ -1,4 +1,4 @@
-import {BelongsToMany, Column, DataType, Model, Table} from "sequelize-typescript";
+import {BelongsToMany, Column, DataType, HasMany, Model, Table} from "sequelize-typescript";
 import {ApiProperty} from "@nestjs/swagger";
 import {User} from "../users/users.model";
 import {UserRoles} from "./user-roles.model";
@@ -48,4 +48,27 @@ export class Roles extends Model<Roles, RolesCreationAttrs>  {
 
   @BelongsToMany(() => User, () => UserRoles)
   users: Array<User>
+
+
 }
+
+// BelongsTo
+// HasMany
+
+/*
+
+ Для User
+ @HasMany(() => Post)
+ posts: Post[]
+
+ User имеет много Post
+
+
+
+ Для Post
+ @BelongsTo(() => User)
+ author: User
+ Post имеет один User
+
+
+*/

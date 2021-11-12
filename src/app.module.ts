@@ -11,7 +11,9 @@ import {UserRoles} from "./roles/user-roles.model";
 
 
 @Module({
-  controllers: [RolesController],
+  controllers: [
+    // RolesController
+  ],
   providers: [],
   imports: [
     ConfigModule.forRoot({
